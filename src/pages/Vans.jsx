@@ -36,10 +36,7 @@ export default function Vans() {
         </ul>
         <p>Clear filters</p>
       </div>
-      <div className="van-cards">
-        {/* van cards go here */}
-        {vanEl}
-      </div>
+      <div className="van-cards">{vanEl}</div>
     </section>
   );
 }
