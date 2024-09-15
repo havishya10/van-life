@@ -28,6 +28,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .bg-container {
   display: flex;
   flex-direction: column;
@@ -36,7 +37,7 @@ a {
   margin: 0 auto;
   max-width: 900px;
 }
-
+/* navbar component */
 nav {
   display: flex;
   justify-content: space-between;
@@ -59,12 +60,17 @@ nav ul li a {
   text-decoration: none;
   color: #4d4d4d;
 }
-nav a:active,
-nav a:visited,
-nav a:hover,
-a:focus {
+nav li a:active,
+nav li a:visited,
+nav li a:focus,
+nav li a:hover,
+.host-page-navbar a:hover,
+.host-page-navbar a:focus {
   text-decoration: underline;
+  font-weight: bold;
+  color: #161616;
 }
+/*----------------- Home Page --------------- */
 header,
 section {
   display: flex;
@@ -104,6 +110,7 @@ button {
 header button {
   background-color: #ff8c38;
 }
+/* footer component */
 footer {
   background-color: #252525;
   color: #aaaaaa;
@@ -111,7 +118,7 @@ footer {
   text-align: center;
   font-size: 1.1rem;
 }
-/* about page */
+/* ---------------- about page ----------------- */
 .about-img {
   width: 100%;
   background-size: cover;
@@ -137,7 +144,7 @@ section {
   color: white;
   font-size: 1rem;
 }
-/* van page */
+/* ------------------ van page --------------------- */
 .van-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -249,5 +256,12 @@ section {
 }
 .van-details button:last-child {
   background-color: #ff8c38;
-  align-self: stretch;
+  width: 100%;
+  max-width: 400px;
+  align-self: center;
+}
+/* ------------------ Host Page ------------------- */
+.host-page-navbar {
+  justify-content: flex-start;
+  gap: 1.5em;
 }

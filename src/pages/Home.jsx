@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-export default function Header() {
+export default function Home() {
   return (
     <header>
       <div>

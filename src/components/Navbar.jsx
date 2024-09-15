@@ -7,6 +7,9 @@ export default function Navbar() {
       </h1>
       <ul>
         <li>
+          <Link to="/host">Host</Link>
+        </li>
+        <li>
           <Link to="/about">About</Link>
         </li>
         <li>
