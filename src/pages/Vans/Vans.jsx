@@ -6,8 +6,12 @@ export default function Vans() {
   React.useEffect(() => {
     fetch("api/vans")
       .then((res) => res.json())
-      .then((data) => setVans(data.vans));
+      .then((data) => {
+        console.log(vans);
+        setVans(data.vans);
+      });
   }, []);
+
   const vanEl = vans.map((van) => {
     return (
       <Link to={`/vans/${van.id}`} key={van.id}>

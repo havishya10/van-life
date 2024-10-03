@@ -9,7 +9,7 @@ body {
   padding: 0;
   min-height: 100vh;
   height: 100vh;
-  background-color: white;
+  background-color: #fff7ed;
 }
 h1,
 h2,
@@ -34,8 +34,6 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  margin: 0 auto;
-  max-width: 900px;
 }
 /* navbar component */
 nav {
@@ -44,6 +42,7 @@ nav {
   align-items: center;
   background-color: #fff7ed;
   padding: 1.3em 1.5em;
+  width: 100%;
 }
 nav ul {
   list-style: none;
@@ -77,7 +76,6 @@ section {
   flex-direction: column;
   align-items: center;
   height: 100%;
-
   font-weight: 500;
   padding: 1.5em;
 }
@@ -86,11 +84,16 @@ header {
   background-size: cover;
   justify-content: center;
   flex: 1;
-
   width: 100%;
   padding: 1.5em;
   color: white;
 }
+section {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.8em;
@@ -264,4 +267,91 @@ section {
 .host-page-navbar {
   justify-content: flex-start;
   gap: 1.5em;
+}
+
+.hostVans-heading {
+  align-self: flex-start;
+}
+.host-vans-container {
+  display: flex;
+  gap: 2em;
+  background-color: white;
+  width: 100%;
+  padding: 1em;
+  align-items: center;
+  border-radius: 7px;
+}
+.host-vans-container img {
+  width: 100px;
+  border-radius: 7px;
+}
+
+.host-vans {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1em 0;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+@media (min-width: 900px) {
+  .host-vans-container {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+/* Host Van Details Page */
+.host-van-details {
+  background-color: white;
+  padding: 1em;
+}
+.host-img-grid {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.host-img-grid img {
+  width: 150px;
+  border-radius: 7px;
+}
+.host-img-grid button {
+  padding: 0.5em 2em;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+.host-img-grid div {
+  gap: 1em;
+}
+.host-img-grid h1 {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  font-size: 1.8rem;
+}
+.host-img-grid h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 0.3em;
+}
+span {
+  font-weight: 500;
+}
+
+.host-van-info {
+  font-size: 1.12rem;
+}
+.host-van-info nav {
+  font-size: 1.25rem;
+  margin: 1em 0;
+  padding: 0;
+  background-color: white !important;
+}
+.host-van-info nav ul li a {
+  color: #4d4d4d;
+}
+.host-van-desc {
+  line-height: 1.7em;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function HostVans() {
   const [hostVans, setHostVans] = React.useState([]);
   React.useEffect(() => {
@@ -8,21 +9,28 @@ export default function HostVans() {
   }, []);
   const vanList = hostVans.map((van) => {
     return (
-      <div className="host-vans-container" key={van.id}>
-        <img src={van.imageUrl} />
+      <Link
+        to={`/host/host-vans/${van.id}`}
+        className="host-vans-container"
+        key={van.id}
+      >
+        <div>
+          <img src={van.imageUrl} />
+        </div>
         <div className="host-van-info">
           <h2>{van.name}</h2>
-          <p>{van.description}</p>
-          <button className={`${van.type}`}>Edit</button>
-          <button className={`${van.type}`}>Delete</button>
+          <p>
+            ${van.price}
+            <span>/day</span>
+          </p>
         </div>
-      </div>
+      </Link>
     );
   });
   return (
-    <section className="host-vans">
-      <h1>Your listed Vans</h1>
-      {vanList}
+    <section>
+      <h1 className="hostVans-heading">Your listed Vans</h1>
+      <div className="host-vans">{vanList}</div>
     </section>
   );
 }
